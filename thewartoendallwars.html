@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The War to End All Wars</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ul { list-style: none; padding-left: 5px; }
+    a { color:blue; text-decoration: none;}
+    hr {
+        background-color: #f9f9fb;
+        padding:15px;
+        border-top: solid 1px #cdcdcd;
+        border-bottom: solid 1px #cdcdcd;
+    }
+    header{
+        display:flex;
+    }
+    header h1{
+        padding-left:50px;
+    }
+    main {
+        max-width: 1440px;
+        margin: auto;
+        grid-gap: 3rem;
+        display: grid;
+        gap: 3rem;
+        grid-template-areas: "sidebar main anchors";
+        grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    footer {
+        min-height: 100px;
+        border-top: solid 1px #cdcdcd;
+    }
+    aside#right {
+        border-left: solid 1px #cdcdcd;
+        padding-left: 15px;
+    }
+    aside#right h2 {
+        color:black;
+    }
+    aside#left {
+        border-right: solid 1px #cdcdcd;
+    }
+    figure {
+        text-align: center;
+    }
+    figcaption {
+        text-align: center;
+    }
+</style>
+<body>
+
+    <header>   
+        <img src="data:image/png;base64,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" width="50"/>
+        <h1>SabatonWiki</h1>
+    </header>
+
+    <hr/>
+
+    <main>
+        <aside id="left">
+            <h2>SabatonWiki</h2>
+            <ul><h3>Álbuns</h3>
+                <li><a href="primovictoria.html">Primo Victoria</a></li>
+                <li><a href="atterodominatus.html">Attero Dominatus</a></li>
+                <li><a href="metalizer.html">Metalizer</a></li>
+                <li><a href="theartofwar.html">The Art of War</a></li>
+                <li><a href="coatofarms.html">Coat of Arms</a></li>
+                <li><a href="carolusrex.html">Carolus Rex</a></li>
+                <li><a href="heroes.html">Heroes</a></li>
+                <li><a href="thelaststand.html">The Last Stand</a></li>
+                <li><a href="thegreatwar.html">The Great War</a></li>
+                <li><a href="thewartoendallwars.html">The War to End All Wars</a></li>
+            </ul>
+        </aside>
+
+        <article>
+            <h1 id="titulo">The War to End All Wars</h1>
+            <p>The War to End All Wars é o décimo álbum da banda de power metal sueca Sabaton. Lançado em 4 de março de 2022, o álbum é uma sequ~encia direta de <a href="thegreatwar.html">The Great War</a>.</p><br/>
+            <p></p><br/>
+            <figure><img src="\Exercicio 3\thewartoend.jpg" class="attero"></figure>
+            <figcaption>Capa do álbum</figcaption>
+            <h3 id="temas">Temas</h3>
+            <p>O álbum funciona como sequência de The Great War. O tema da Primeira Guerra Mundial continua central, com músicas para pessoas, eventos, batalhões e batalhas.</p><br/>
+            <h3 id="faixas">Faixas</h3>
+                <ol>
+                    <li>Sarajevo</li>
+                    <li>Stormtroopers</li>
+                    <li>Dreadnought</li>
+                    <li>The Unkillable Soldier</li>
+                    <li>Soldier of Heaven</li>
+                    <li>Hellfighters</li>
+                    <li>Race to the Sea</li>
+                    <li>Lady of the Dark</li>
+                    <li>The Valley of Death</li>
+                    <li>Christmas Truce</li>
+                    <li>Versailles</li>
+                    <br/>
+                </ol>
+            <h3 id="creditos">Créditos</h3>
+            <ul>
+                <li>Joakim Brodén – vocais e teclados</li>
+                <li>Chris Rörland – guitarras</li>
+                <li>Tommy Johannson – guitarras</li>
+                <li>Pär Sundström – baixo</li>
+                <li>Hannes van Dhal – bateria</li>
+            </ul>
+        </article>
+        
+
+        <aside id="right">
+            <ul><a href="#titulo"><h2>The War to End All Wars</h2>
+             <li><a href="#temas">Temas</a></li>
+             <li><a href="#faixas">Faixas</a></li>
+             <li><a href="#creditos">Créditos</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+       <p><small>Quer apoiar a SabatonWiki?</small></p>
+       <p><small>Clique aqui e <button href="cadastro.html">cadastre-se</button></small></p>   
+    </footer>
+</body>
+</html>
