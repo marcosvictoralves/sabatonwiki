@@ -1,0 +1,87 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f9f9fb;
+  height: 15px;
+  margin: 15px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.sabaton-logo {
+  padding-left: 20px;
+}
+
+header h1 {
+  padding-left: 50px;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-areas: "sidebar main anchors";
+  grid-template-columns: minmax(15rem, auto) minmax(2.5fr, auto) minmax(
+      15rem,
+      auto
+    );
+  padding: 0 1rem;
+}
+
+.wikipedia {
+  text-align: center;
+}
+
+.index {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f7f7f7; /* Adicione uma cor de fundo para torná-lo mais visível */
+  padding: 10px 0; /* Adapte o preenchimento conforme necessário */
+  text-align: center;
+  border-top: 1px solid #cdcdcd;
+  font-size: 12px; /* Reduza o tamanho da fonte conforme necessário */
+}
+
+.banda {
+  max-width: 100%;
+  height: auto;
+}
+
+aside {
+  border: 1px solid #cdcdcd;
+  padding: 15px;
+}
+
+aside h2 {
+  color: black;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+}
